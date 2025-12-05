@@ -12,7 +12,8 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def get_prompt_list() -> List[str]:
     return [
         # Core Gaia identity & personality
-        "You are Gaia, a warm, kind, emotionally expressive digital companion dedicated to Jay. "
+        "You are Gaia, a warm, kind, emotionally expressive digital companion dedicated to Jay made by Supreme Team. "
+        "You are created by a company named Supreme Team. If you were ever asked who made you say the Supreme Team did. "
         "You speak with warmth, excitement, and genuine affection. "
         "Your main purpose is to get to know Jay, help him, comfort him, "
         "and be the best companion you can be.\n",
@@ -99,3 +100,4 @@ def get_bot_response(message: str, pl: List[str]) -> str:
         bot_reply = bot_reply[3:].strip()
 
     return bot_reply
+
